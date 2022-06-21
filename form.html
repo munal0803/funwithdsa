@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+</head>
+<style media="screen">
+  .alert{
+    width:100%;
+    color:white;
+    background:black;
+    padding:10px 20px;
+    font-size:18px;
+    display:none
+  }
+  .note{
+    width:100%;
+    color:white;
+    background:black;
+    padding:10px 20px;
+    margin-top:20;
+    font-size:18px;
+  }
+  body{
+    padding:20px;
+  }
+</style>
+<body>
+
+<div class="container">
+  <h2>Project Addition Form</h2>
+  <form action="/action_page.php" id="funwithdsa">
+    <div class="alert"> Your Project is Under Review </div>
+
+    </div>
+    <div class="form-group">
+      <label>Project Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Project's Name" name="email">
+    </div>
+    <div class="form-group">
+      <label>data structure and Algorithm used</label>
+      <input type="text" class="form-control" id="dsalgo" placeholder="Enter Datastructre and Algorithm used" name="pwd">
+    </div>
+    <div class="form-group">
+      <label>Link of Project</label>
+      <input type="text" class="form-control" id="link" placeholder="Link of Project" name="pwd">
+    </div>
+    <div class="form-group">
+      <label>Github Link</label>
+      <input type="text" class="form-control" id="gitlink" placeholder="Github/Bitbucket repository link" name="pwd">
+    </div
+    <div class="form-group">
+      <label>Your Name</label>
+      <input type="text" class="form-control" id="reponame" placeholder="Your name" name="pwd">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+    <div class="note"> We will Let You know when your project will get Added </div>
+
+  </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="mail.js"></script>
+
+</script>
+</body>
+</html>

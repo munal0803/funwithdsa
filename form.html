@@ -4,12 +4,30 @@
   <title>Add Project</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <style media="screen">
+  .foot{
+    margin-top: 5rem;
+    padding: 20px;
+    background-color:black;
+    color:white;
+  }
+
+
+  </style>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 </head>
 <style media="screen">
+body{
+  margin-bottom: 0;
+}
+footer{
+  margin-bottom: 0;
+}
+
   .alert{
     width:100%;
     color:white;
@@ -19,6 +37,7 @@
     display:none
   }
   .note{
+    margin-top:5rem;
     width:100%;
     color:white;
     background:black;
@@ -26,13 +45,49 @@
     margin-top:20;
     font-size:18px;
   }
-  body{
+  .hero{
     padding:20px;
   }
+  .class{
+    padding-bottom: 0;
+  }
+
 </style>
 <body>
+  <nav class="navbar navbar-dark bg-dark">
+  <!-- Navbar content -->
 
-<div class="container">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Fun With DS/Algo</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Projects<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="form.html">Add Project request</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="fatch.html">Project Under Review</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Contact Us
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="#">FunwithDSA instagram</a>
+        <a class="dropdown-item" href="#">FunwithDSA Facebook</a>
+        <a class="dropdown-item" href="#">funwithdsa@gmail.com</a>
+      </div>
+    </li>
+  </ul>
+</div>
+</nav>
+<div class="hero">
+<div class="container hero">
   <h2>Project Addition Form</h2>
   <form action="/action_page.php" id="funwithdsa">
     <div class="alert"> Your Project is Under Review </div>
@@ -58,12 +113,72 @@
       <label>Your Name</label>
       <input type="text" class="form-control" id="reponame" placeholder="Your name" name="pwd">
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-    <div class="note"> We will Let You know when your project will get Added </div>
-
+    <center>
+    <button type="submit" class="btn btn-dark but">Submit</button></center>
   </form>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+</div>
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="my-5 class">
+
+    <footer style="background-color: #deded5;">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4">
+          <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">About Adding Project Process</h5>
+          <p>
+            We will review your project and check if the project the project is made by own or copied from somewhere. We will also check if the project is working fine all condition.
+            If the project works fine and not copied from anywhere then your project will be displayed in our gallery along with your name and github repo.
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">links</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-1">
+              <a href="" style="color: #4f4f4f;">Frequently Asked Questions</a>
+            </li>
+            <li class="mb-1">
+              <a href="index.html" style="color: #4f4f4f;">Home</a>
+            </li>
+            <li class="mb-1">
+              <a href="" style="color: #4f4f4f;">Contact Us</a>
+            </li>
+            <li>
+              <a href="" style="color: #4f4f4f;">Follow Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="mb-1" style="letter-spacing: 2px; color: #818963;">opening hours</h5>
+          <table class="table" style="color: #4f4f4f; border-color: #666;">
+            <tbody>
+              <tr>
+                <td>Fri - sat:</td>
+                <td>8am - 9pm</td>
+              </tr>
+              <tr>
+                <td>Sun:</td>
+                <td>8am - 1am</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-dark" href="">Roli25.github.io Munal0803.github.io</a>
+    </div>
+  </footer>
+
+</div>
+<div class="last">
+  <center>
+  <h3 style="color:white;background-color:black; padding-top:1rem; padding-bottom:1rem;">We will let you know when your project is added on this website</h2>
+</center></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js">
+</script>
 <script src="mail.js"></script>
 
 </script>

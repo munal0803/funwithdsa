@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Project Under Review</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Fun With DS/Algo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Projects<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="form.html">Add Project request</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="fatch.html">Project Under Review</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Contact Us
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">FunwithDSA instagram</a>
+          <a class="dropdown-item" href="#">FunwithDSA Facebook</a>
+          <a class="dropdown-item" href="#">funwithdsa@gmail.com</a>
+        </div>
+      </li>
+    </ul>
+    </div>
+    </nav>
+    <div class="container">
+    <table class="table">
+      <thread>
+        <th>No.</th>
+        <th>Project Name</th>
+          <th>Data Structure/Algorithms</th>
+            <th>link of Project</th>
+              <th>Developed By</th>
+      </thread>
+    <tbody id = "tbody1">
+
+    </tbody>
+
+    </table>
+  </div>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+<script type="text/javascript">
+const firebaseConfig = {
+  apiKey: "AIzaSyC-2X7QqHjj2eclUP6gy-4T5XSJnKSmsRE",
+  authDomain: "funwithdsa-86d2d.firebaseapp.com",
+  databaseURL: "https://funwithdsa-86d2d-default-rtdb.firebaseio.com",
+  projectId: "funwithdsa-86d2d",
+  storageBucket: "funwithdsa-86d2d.appspot.com",
+  messagingSenderId: "661180752766",
+  appId: "1:661180752766:web:73843ddeae4a4c998ec92f"
+};
+// intitialize firebase
+firebase.initializeApp(firebaseConfig);
+//get database
+function SelectAllData(){
+  firebase.database().ref('funwithdsa').on('value',
+function(AllRecords){
+ AllRecords.forEach(
+   function(CurrentRecord){
+     var name = CurrentRecord.val().name;
+     var dsalgo = CurrentRecord.val().dsalgo;
+     var link = CurrentRecord.val().link;
+     var reponame = CurrentRecord.val().reponame;
+     AddItemsToTable(name,dsalgo,link,reponame);
+   }
+ );
+}
+);
+}
+window.onload=SelectAllData;
+var stdNo = 0;
+function AddItemsToTable(name,dsalgo,link,reponame){
+  var tbody = document.getElementById('tbody1');
+  var trow = document.createElement('tr');
+  var td1 = document.createElement('td');
+     var td2 = document.createElement('td');
+  var td3 = document.createElement('td');
+      var td4 = document.createElement('td');
+       var td5 = document.createElement('td');
+  td1.innerHTML = ++stdNo;
+  td2.innerHTML=name;
+  td3.innerHTML=dsalgo;
+ td4.innerHTML=link;
+  td5.innerHTML=reponame;
+trow.appendChild(td1);
+trow.appendChild(td2);trow.appendChild(td3);trow.appendChild(td4);
+trow.appendChild(td5);
+tbody.appendChild(trow);
+}
+
+
+</script>
+
+  </body>
+</html>

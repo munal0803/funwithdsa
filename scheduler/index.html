@@ -8,6 +8,18 @@
   .checkbox-2{
     margin-left: 40%;
   }
+  .container{
+    padding-top: 5rem;
+  }
+  .heading{
+    margin-bottom:2rem;
+  }
+  .first{
+    color:red;
+  }
+  .second{
+    color:gray;
+  }
 </style>
   </head>
   <body>
@@ -44,62 +56,55 @@
 </script>
 
 <div class="container">
+  <center><H1 class="heading"><span class="first">Meeting</span><span class ="second"> Scheduler</span></h1></center>
   <form>
-    <h2>Meeting Scheduler</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="first">Member 1: From</label>
-          <input type="number" id="member1from" value="">
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="last">Member 1: To</label>
-          <input type="number" id="member1to" value="">
-        </div>
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline">
+        <input type="number" id="member1from"  class="form-control" />
+        <label class="form-label" for="form6Example1">Member 1: From</label>
       </div>
     </div>
-<div class="row">
-    <div class="col-md-6">
-      <div class="form-group">
-        <label for="first">Member 2: From</label>
-      <input type="number" id="member2from" value="">
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="form-group">
-        <label for="last">Member 2: To</label>
-          <input type="number" id="member2to" value="">
+    <div class="col">
+      <div class="form-outline">
+        <input type="number" id="member1to" class="form-control" />
+        <label class="form-label" for="form6Example2">Member 1: To</label>
       </div>
     </div>
   </div>
-  <div class="row">
-  <div class="col-md-6">
-    <div class="form-group">
-      <label for="first">Member 3: From</label>
-  <input type="number" id="member3from" value="">
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline">
+        <input type="number" id="member2from" value="" class="form-control" />
+        <label class="form-label" for="form6Example1">Member 2: From</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-outline">
+        <input type="number" id="member2to" value="" class="form-control" />
+        <label class="form-label" for="form6Example2">Member 2: To</label>
+      </div>
     </div>
   </div>
-  <div class="col-md-6">
-    <div class="form-group">
-      <label for="last">Member 3: To</label>
-          <input type="number" id="member3to" value="">
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline">
+        <input type="number" id="member3from" value="" class="form-control" />
+        <label class="form-label" for="form6Example1">Member 3: From</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-outline">
+        <input type="number" id="member3to" value="" class="form-control" />
+        <label class="form-label" for="form6Example2">Member 3: To</label>
+      </div>
     </div>
   </div>
-</div>
-</div>
 
-      <div class="checkbox-2">
-        <input type="button" value="Submit" id = "submit"
-               onClick = "tempertureConverter()">
-    </div>
+  <button type="button" value="Submit" id = "submit"
+         onClick = "tempertureConverter()" class="btn btn-danger btn-block mb-4">Submit</button>
+</form>
 
-
-
-  </form>
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

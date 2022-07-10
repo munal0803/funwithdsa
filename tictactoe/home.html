@@ -4,12 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Tic Tac Toe</title>
+<style media="screen">
+  .bt{
+    margin:2rem;
+  }
+  .heading{
+    margin-top:20rem;
+  }
+  .first{
+    color:red;
+  }
+  .second{
+    color:darkgreen;
+  }
+  .third{
+    color:gray;
+  }
+</style>
 
-  <link rel="stylesheet" href="home.css">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="home.css">
 </head>
 
 <body>
+
+<div class="container">
+
 
 	<table>
 		<tr>
@@ -31,8 +51,12 @@
 	<div class="endgame">
 		<div class="text"></div>
 	</div>
-	<button onClick="startGame()">Replay</button>
-
+	<button onClick="startGame()" class="btn btn-danger btn-block mb-4 bt">Replay</button>
+</div>
+<div class="heading"><center>
+  <h1><span class="first">TIC</span><span class="second"> TAC</span> <span class="third">TOE</span></h1>
+</center>
+</div>
   <script src="home.js"></script>
 </body>
 </html>
